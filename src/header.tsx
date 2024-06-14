@@ -1,12 +1,17 @@
-import tanya from '../public/images/image-tanya.jpg';
+import tanya from '/images/image-tanya.jpg';
+import next from '/images/icon-next.svg';
+import prev from '/images/icon-prev.svg';
 
 function Header() {
 
     return (
         <header>
-            <img src={tanya} alt=""></img>
+            <img src={tanya} className='profile' alt=""></img>
+            <div className='slider'>
+                <img src={prev} alt='back arrow button'></img>
+                <img src={next} alt='next arrow button'></img>
+            </div>
         </header>
-   
     )
   }
   
