@@ -6,42 +6,31 @@ import prev from '/images/icon-prev.svg';
 function Header() {
     
     function slider() {
-        const user1 = document.getElementById('profile_1_img');
-        const user2 = document.getElementById('profile_2_img');
-        const user1_profile = document.getElementById('profile_1');
-        const user2_profile = document.getElementById('profile_2');
-        const user1_name = document.getElementById('profile_1_name');
-        const user1_title = document.getElementById('profile_1_title');
-        const user2_name = document.getElementById('profile_2_name');
-        const user2_title = document.getElementById('profile_2_title');
+       
+        const currentProfile = document.getElementById('profile_1_img');
+        const currentProfile_p = document.getElementById('profile_1');
+        const nextProfile = document.getElementById('profile_2_img');
+        const nextProfile_p = document.getElementById('profile_2');
 
-        let currentProfile = document.getElementById('profile_1_img');
-        let nextProfile = document.getElementById('profile_2_img');
-
-
-    if(user1?.className === 'profile'){
-        user1?.classList.remove('profile');
-        user1?.classList.add('visually-hidden');
-        user1_profile?.classList.remove('profile_p');
-        user1_profile?.classList.add('visually-hidden');
-        user1_name?.classList.remove('name');
-        user1_name?.classList.add('visually-hidden');
-        user1_title?.classList.remove('title');
-        user1_title?.classList.add('visually-hidden');
-        user2?.classList.remove('visually-hidden');
-        user2?.classList.add('profile');
-        user2_profile?.classList.remove('visually-hidden');
-        user2_profile?.classList.add('profile_p');
-        user2_name?.classList.remove('visually-hidden');
-        user2_name?.classList.add('name');
-        user2_title?.classList.remove('visually-hidden');
-        user2_title?.classList.add('title');
-    }else{
-        user1?.classList.remove('visually-hidden');
-        user1?.classList.add('profile');
-        user2?.classList.remove('profile');
-        user2?.classList.add('visually-hidden');
-    }
+        if(currentProfile?.className === 'profile') {
+            currentProfile?.classList.remove('profile');
+            currentProfile?.classList.add('visually-hidden');
+            currentProfile_p?.classList.remove('profile_div');
+            currentProfile_p?.classList.add('visually-hidden');
+            nextProfile?.classList.remove('visually-hidden');
+            nextProfile?.classList.add('profile');
+            nextProfile_p?.classList.remove('visually-hidden');
+            nextProfile_p?.classList.add('profile_div');
+        }else{
+            currentProfile?.classList.remove('visually-hidden');
+            currentProfile?.classList.add('profile');
+            currentProfile_p?.classList.remove('visually-hidden');
+            currentProfile_p?.classList.add('profile_div');
+            nextProfile?.classList.remove('profile');
+            nextProfile?.classList.add('visually-hidden');
+            nextProfile_p?.classList.remove('profile_div');
+            nextProfile_p?.classList.add('visually-hidden');
+        }
 }
 
     return (
