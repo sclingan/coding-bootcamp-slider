@@ -12,7 +12,7 @@
 
 /* TODO: 
      figure out storing font locally
-     add and fix profile_div
+     test position to slider controls for different sizes
 */
 
 main {
@@ -21,7 +21,6 @@ main {
   color: var(--dark-blue);
   margin-block: 2rem;
   margin-inline: 1rem;
-
 }
 
 header {
@@ -80,6 +79,17 @@ article > p {
   margin-block: 1rem;
 }
 
+.profile_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile_p {
+  margin-bottom: 1.5rem;
+}
+
 .name {
   font-weight: var(--fw-700);
   color: var(--dark-blue);
@@ -88,10 +98,14 @@ article > p {
 .title {
   padding-top: 0;
   margin-top: 0;
+  color: var(--gray-blue);
 }
 
+/* Try moving background img to main and position bottom */
 footer {
   background-image: url('../public/images/pattern-curve.svg');
   background-repeat: no-repeat;
-  min-height: 20rem; /* used for testing */
+  background-size: cover;
+  background-position: bottom center;
+  min-height: 9rem; 
 }

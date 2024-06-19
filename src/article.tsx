@@ -13,7 +13,7 @@ function Article() {
                   <p className="title" id='profile_1_title'>UX Engineer</p>
             </div>
             <div className="visually-hidden" id='profile_2'>
-                <p className="profile">“ If you want to lay the best foundation possible I’d recommend taking this course. 
+                <p className="profile_p">“ If you want to lay the best foundation possible I’d recommend taking this course. 
                     The depth the instructors go into is incredible. I now feel so confident about 
                     starting up as a professional developer. ”</p>
 
