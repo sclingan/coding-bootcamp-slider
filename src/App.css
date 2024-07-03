@@ -103,9 +103,49 @@ article > p {
 
 /* Try moving background img to main and position bottom */
 footer {
-  background-image: url('../public/images/pattern-curve.svg');
+  background-image: url('images/pattern-curve.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
   min-height: 9rem; 
+}
+
+@media(min-width: 40rem) {
+
+  body {
+    /* display: flex; */
+    /* align-items: center; */
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  header {
+    z-index: 0;
+    min-width: max-content;
+    margin: auto 0;
+  }
+
+  article {
+    font-size: 2rem;
+    z-index: 1;
+    /* padding-inline: 3rem; */
+  }
+
+  .name {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    min-width: 2rem;
+  }
+  
 }
