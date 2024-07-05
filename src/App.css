@@ -13,6 +13,7 @@
 /* TODO: 
      figure out storing font locally
      test position to slider controls for different sizes
+     fix desktop at 1000px 
 */
 
 main {
@@ -113,30 +114,29 @@ footer {
 @media(min-width: 40rem) {
 
   body {
-    /* display: flex; */
-    /* align-items: center; */
+    display: flex;
+    align-items: center;
   }
 
   main {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
   }
 
   header {
-    z-index: 0;
     min-width: max-content;
-    margin: auto 0;
+    margin-right: 10rem;
   }
 
   article {
+    position: relative;
+    left: 8.2rem;
     font-size: 2rem;
-    z-index: 1;
-    /* padding-inline: 3rem; */
+    max-width: 35rem;
   }
 
   .name {
-    display: flex;
-    flex-direction: row;
     font-size: 1.5rem;
   }
 
@@ -145,7 +145,6 @@ footer {
   }
 
   footer {
-    min-width: 2rem;
   }
   
 }
