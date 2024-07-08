@@ -17,6 +17,7 @@
 */
 
 main {
+  font-family: var(--ff);
   font-size: 1.2rem;
   font-weight: var(--fw-300);
   color: var(--dark-blue);
@@ -119,21 +120,34 @@ footer {
   }
 
   main {
+    position: relative;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    z-index: 0;
   }
 
   header {
-    min-width: max-content;
-    margin-right: 10rem;
+    position: relative;
+    z-index: 1;
+    min-width: 42rem;
+  }
+
+  .slider {
+    min-width: 7rem;
+    padding-block: 1.3rem;
+    border-radius: 2rem;
+    gap: 2.5rem;
+    top: -2rem;
+    left: 4rem;
   }
 
   article {
     position: relative;
-    left: 8.2rem;
+    left: 1rem;
+    top: 0;
     font-size: 2rem;
-    max-width: 35rem;
+    z-index: 3;
   }
 
   .name {
