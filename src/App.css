@@ -116,15 +116,40 @@ footer {
 
   main {
     margin: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
   }
 
   header {
-    display: inline-block;
+    grid-column: 2/2;
+    min-width: 30rem;
+    z-index: 0;
+    margin-left: 28rem;
+  }
+
+  article {
+    position: fixed;
+    grid-column: 1/1;
+    grid-row: 1/1;
+    z-index: 1;
+    background-position: 6rem -1rem;
+    padding-top: 5rem;
+    font-size: 2rem;
+    /* max-width: 37rem; */
+    padding-left: 6rem;
+    max-width: 44rem;
+  }
+
+  /* header {
     position: absolute;
     right: 5rem;
     top: 7rem;
     z-index: 0;
-  }
+  } */
 
   .slider {
     min-width: 7rem;
@@ -135,7 +160,7 @@ footer {
     left: 4rem;
   }
 
-  article {
+  /* article {
     position: absolute;
     top: 13rem;
     left: 8rem;
@@ -144,7 +169,7 @@ footer {
     z-index: 1;
     background-position: 6rem -1rem;
     padding-top: 5rem;
-  }
+  } */
 
   .name {
     position: absolute;
