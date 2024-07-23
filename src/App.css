@@ -11,9 +11,7 @@
 }
 
 /* TODO: 
-     figure out storing font locally
-     test position to slider controls for different sizes
-     fix desktop at 1000px 
+    fix name and title, then work on overlap of text
 */
 
 main {
@@ -22,7 +20,6 @@ main {
   font-weight: var(--fw-300);
   color: var(--dark-blue);
   margin-block: 2rem;
-  margin-inline: 1rem;
 }
 
 header {
@@ -33,6 +30,7 @@ header {
   background-size: contain;
   padding-block: 2rem;
   padding-inline: 2.5rem;
+  margin-inline: 1rem;
 }
 
 .profile {
@@ -74,7 +72,7 @@ article {
   background-size: 25%;
   margin-block: 2rem;
   padding-block: 1rem;
-  margin-inline: 1.5rem;
+  margin-inline: 2.5rem;
 }
 
 article > p {
@@ -103,21 +101,20 @@ article > p {
   color: var(--gray-blue);
 }
 
-/* Try moving background img to main and position bottom */
 footer {
   background-image: url('images/pattern-curve.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
-  min-height: 9rem; 
+  min-height: 14rem;
 }
 
-@media(min-width: 40rem) {
+@media(min-width: 56.25rem) {
 
   main {
     margin: 0;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     align-items: center;
     justify-content: center;
@@ -128,28 +125,19 @@ footer {
     grid-column: 2/2;
     min-width: 30rem;
     z-index: 0;
-    margin-left: 28rem;
   }
 
   article {
-    position: fixed;
     grid-column: 1/1;
     grid-row: 1/1;
     z-index: 1;
     background-position: 6rem -1rem;
-    padding-top: 5rem;
     font-size: 2rem;
-    /* max-width: 37rem; */
-    padding-left: 6rem;
-    max-width: 44rem;
+    padding-left: 2rem;
+    margin-left: 10rem;
+    overflow: visible;
+    min-width: 90%;
   }
-
-  /* header {
-    position: absolute;
-    right: 5rem;
-    top: 7rem;
-    z-index: 0;
-  } */
 
   .slider {
     min-width: 7rem;
@@ -160,38 +148,28 @@ footer {
     left: 4rem;
   }
 
-  /* article {
+  /* .name {
     position: absolute;
-    top: 13rem;
-    left: 8rem;
-    max-width: 47%;
-    font-size: 2rem;
-    z-index: 1;
-    background-position: 6rem -1rem;
-    padding-top: 5rem;
+    top: 32rem;
+    left: 3.5rem;
+    font-size: 1.3rem;
   } */
 
-  .name {
+  /* .title {
     position: absolute;
-    top: 22rem;
-    left: 0;
+    top: 32rem;
+    left: 13.3rem;
     font-size: 1.3rem;
-  }
-
-  .title {
-    position: absolute;
-    top: 22rem;
-    left: 10rem;
-    font-size: 1.3rem;
-  }
+  } */
 
   footer {
     position: absolute;
-    background-position: top left;
-    background-size: 50%;
+    background-position: bottom left;
+    background-size: 75%;
     bottom: 0;
     left: -1rem;
     min-width: 100%;
+    min-height: 18rem;
   }
   
 }
