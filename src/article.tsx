@@ -16,9 +16,10 @@ function Article() {
                 <p className="profile_p">“ If you want to lay the best foundation possible I’d recommend taking this course. 
                     The depth the instructors go into is incredible. I now feel so confident about 
                     starting up as a professional developer. ”</p>
-
+                    <div className="name_title">
                     <span className="name" id='profile_2_name'>John Tarkpor</span>
                     <p className="title" id='profile_2_title'>Junior Front-end Developer</p>
+                    </div>
             </div>
         </article>
    
