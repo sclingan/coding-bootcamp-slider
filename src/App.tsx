@@ -1,7 +1,6 @@
 import './App.css'
 import Header from './header'
 import Article from './article'
-import Footer from './footer'
 
 
 function App() {
@@ -10,7 +9,8 @@ function App() {
     <main>
       <Header />
       <Article />
-      <Footer />
+      <footer>
+      </footer>
     </main>
   )
 }
